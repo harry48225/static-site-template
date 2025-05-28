@@ -1,7 +1,13 @@
 <nav class="navbar">
   {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" class="navbar-item {% if page.url == item.link %}current{% endif %}">
-      {{ item.name }}
+      {% assign link_start = item.link | split: "." | first %}
+    <a href="{{ item.link }}" class="navbar-item {% if (page.url contains link_start and item.link != "/") or item.link == page.url %}current{% endif %}">
+        {{ item.name }}
     </a>
   {% endfor %}
+  <div id="spinner-container navbar-item" style="margin-left: auto; margin-right: 16px">
+      <p id="spinner">
+          O.C.T.O.P.O.D.E.
+      </p>
+  </div>
 </nav>
