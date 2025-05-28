@@ -1,3 +1,58 @@
+:root {
+  --bg: #f2e5bc;
+  --fg: #3c3836;
+  --red: #cc241d;
+  --green: #98971a;
+  --yellow: #d79921;
+  --blue: #458588;
+  --purple: #b16286;
+  --aqua: #689d6a;
+  --gray: #7c6f64;
+  --orange: #d65d0e;
+}
+
+body {
+  padding: 0 32px;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.navbar {
+  display: flex;
+  margin: 16px -16px;
+  border: var(--fg) double 8px;
+}
+
+.navbar-item {
+  padding: 16px;
+  color: var(--fg) !important;
+  font-weight: bold;
+}
+
 .current {
-  color: green;
+  background: var(--purple);
+}
+
+#spinner-container {
+  perspective: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+#spinner {
+  text-align: center;
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(-360deg); }
+}
+@keyframes depth {
+  0% { text-shadow: 0 0 black; }
+  25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+  50% { text-shadow: 0 0 black; }
+  75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+  100% { text-shadow: 0 0 black; }
 }
