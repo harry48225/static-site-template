@@ -12,21 +12,45 @@
 }
 
 body {
-  padding: 0 32px;
-  background: var(--bg);
-  color: var(--fg);
+  > div {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 32px;
+    background: var(--bg);
+    color: var(--fg);
+    max-width: 1000px;
+    min-height: 800px;
+    border: var(--gray) solid 3px;
+  }
+}
+
+p {
+  font-size: large;
 }
 
 .navbar {
   display: flex;
   margin: 16px -16px;
   border: var(--fg) double 8px;
+  height: 48px;
 }
 
 .navbar-item {
   padding: 16px;
   color: var(--fg) !important;
   font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin: auto -32px -4px -32px;
+  padding: 8px;
+  border-top: var(--gray) solid 3px;
+  text-align: end;
 }
 
 .current {

@@ -6,7 +6,12 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-    {% include navigation.html %}
-    {{ content }}
+    <div>
+        {% include navigation.html %}
+        <main>
+            {{ content }}
+        </main>
+        {% include footer.html %}
+    </div>
 </body>
 </html>
