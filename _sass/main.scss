@@ -32,13 +32,15 @@ p {
   display: flex;
   margin: 16px -16px;
   border: var(--fg) double 8px;
-  height: 48px;
 }
 
 .navbar-item {
-  padding: 16px;
+  display: flex;
+  vertical-align: center;
+  align-items: center;
   color: var(--fg) !important;
   font-weight: bold;
+  padding: 0 8px;
 }
 
 img {
