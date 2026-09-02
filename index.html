@@ -12,7 +12,7 @@ title: octopode
     {% assign posts = site.projects |  sort: 'date' |  reverse %}
     {% for post in posts %}
         <li>
-            <a href="{{ post.url }}">{{ post.title }} ({{ post.date | date: "%m/%d/%y" }})</a>
+            <a href="{{ post.url }}">{{ post.title }} ({{ post.date | date: "%d/%m/%y" }})</a>
         </li>
     {% endfor %}
 </ul>
